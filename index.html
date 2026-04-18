@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ana Freire</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      z-index: 100;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
+                  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      opacity: 0.85;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 100px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .sobre {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .sobre img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .servicos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 16px;
+    }
+
+    .contacto {
+      text-align: center;
+    }
+
+    .telefone {
+      font-size: 28px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      opacity: 0.6;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (max-width: 800px) {
+      .sobre {
+        grid-template-columns: 1fr;
+      }
+
+      .servicos {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div><strong>Ana Freire</strong></div>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <div>
+    <h1>Ana Freire</h1>
+    <p>Bem-estar • equilíbrio • acompanhamento personalizado</p>
+  </div>
+</div>
+
+<section id="sobre">
+  <div class="sobre">
+    <img src="https://images.unsplash.com/photo-1558222218-b7b54eede3f3?q=80&w=800" alt="Ana Freire"/>
+    <div>
+      <h2>Sobre</h2>
+      <p>
+        Ana Freire dedica-se ao acompanhamento personalizado, promovendo bem-estar,
+        clareza e equilíbrio emocional.
+      </p>
+      <p>
+        Cada pessoa é única e o acompanhamento é adaptado às suas necessidades.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <h2>Serviços</h2>
+
+  <div class="servicos">
+    <div class="card">
+      <h3>Acompanhamento individual</h3>
+      <p>Sessões focadas no bem-estar e desenvolvimento pessoal.</p>
+    </div>
+
+    <div class="card">
+      <h3>Momentos de mudança</h3>
+      <p>Apoio em fases difíceis e decisões importantes.</p>
+    </div>
+
+    <div class="card">
+      <h3>Desenvolvimento pessoal</h3>
+      <p>Crescimento, clareza interior e equilíbrio.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contacto">
+  <h2>Contacto</h2>
+  <p>Marque o seu primeiro contacto</p>
+
+  <div class="telefone">
+    <a href="tel:9141121438" style="color:white; text-decoration:none;">
+      9141121438
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Ana Freire
+</footer>
+
+</body>
+</html>
