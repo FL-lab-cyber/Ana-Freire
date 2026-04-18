@@ -2,198 +2,384 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ana Freire</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ana Seixas Freire</title>
   <style>
     * {
       box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(15, 23, 42, 0.9);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 40px;
-      z-index: 100;
-    }
-
-    header a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
-
-    .hero {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
-                  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      opacity: 0.85;
-      line-height: 1.6;
-    }
-
-    section {
-      padding: 100px 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .sobre {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .sobre img {
-      width: 100%;
-      border-radius: 20px;
-    }
-
-    .servicos {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 16px;
-    }
-
-    .contacto {
-      text-align: center;
-    }
-
-    .telefone {
-      font-size: 28px;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px;
-      opacity: 0.6;
     }
 
     html {
       scroll-behavior: smooth;
     }
 
-    @media (max-width: 800px) {
-      .sobre {
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f5;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 18px 40px;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      opacity: 0.92;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 140px 24px 80px;
+      background:
+        linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.48)),
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80')
+        center/cover no-repeat;
+      color: white;
+    }
+
+    .hero-inner {
+      max-width: 820px;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: 54px;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      margin: 0 auto 28px;
+      max-width: 720px;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #0f172a;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.5);
+      color: white;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 90px 24px;
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      font-size: 38px;
+      line-height: 1.15;
+      color: #111827;
+    }
+
+    .section-subtitle {
+      margin: 0 0 36px;
+      color: #4b5563;
+      max-width: 780px;
+    }
+
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .bio-image {
+      width: 100%;
+      border-radius: 24px;
+      display: block;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    }
+
+    .bio-text {
+      font-size: 17px;
+      color: #374151;
+    }
+
+    .bio-text p {
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 34px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 22px;
+      color: #111827;
+    }
+
+    .card p {
+      margin: 0;
+      color: #4b5563;
+    }
+
+    .contact-box {
+      background: #ffffff;
+      border-radius: 26px;
+      padding: 34px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .phone-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 30px;
+      font-weight: 700;
+      color: #0f172a;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #0f172a;
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .bio-grid {
         grid-template-columns: 1fr;
       }
 
-      .servicos {
+      .services {
         grid-template-columns: 1fr;
       }
 
-      h1 {
-        font-size: 36px;
+      .hero h1 {
+        font-size: 42px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 16px 18px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .hero {
+        padding-top: 170px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      .phone-link {
+        font-size: 24px;
       }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <div><strong>Ana Freire</strong></div>
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
+  <header>
+    <div class="nav">
+      <div class="brand">Ana Seixas Freire</div>
+      <nav class="nav-links">
+        <a href="#sobre">Biografia</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="hero" id="home">
-  <div>
-    <h1>Ana Freire</h1>
-    <p>Bem-estar • equilíbrio • acompanhamento personalizado</p>
-  </div>
-</div>
-
-<section id="sobre">
-  <div class="sobre">
-    <img src="https://images.unsplash.com/photo-1558222218-b7b54eede3f3?q=80&w=800" alt="Ana Freire"/>
-    <div>
-      <h2>Sobre</h2>
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <h1>Ana Seixas Freire</h1>
       <p>
-        Ana Freire dedica-se ao acompanhamento personalizado, promovendo bem-estar,
-        clareza e equilíbrio emocional.
+        Psicóloga Clínica e da Saúde, Psicoterapeuta, com enfoque na psicoterapia de adultos,
+        terapia de casal e supervisão.
       </p>
-      <p>
-        Cada pessoa é única e o acompanhamento é adaptado às suas necessidades.
-      </p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#contacto">Marcar contacto</a>
+        <a class="btn btn-secondary" href="#sobre">Ler biografia</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="servicos">
-  <h2>Serviços</h2>
+  <section class="section" id="sobre">
+    <h2 class="section-title">Biografia</h2>
+    <p class="section-subtitle">
+      Conheça o percurso profissional e a abordagem clínica de Ana Seixas Freire.
+    </p>
 
-  <div class="servicos">
-    <div class="card">
-      <h3>Acompanhamento individual</h3>
-      <p>Sessões focadas no bem-estar e desenvolvimento pessoal.</p>
+    <div class="bio-grid">
+      <div>
+        <img src="ana-freire.jpg" alt="Ana Seixas Freire" class="bio-image">
+      </div>
+
+      <div class="bio-text">
+        <p>
+          <strong>Ana Seixas Freire</strong> é Psicóloga Clínica e da Saúde, Psicoterapeuta,
+          membro efetivo da Ordem dos Psicólogos Portugueses e da Sociedade Portuguesa de
+          Psicoterapias Construtivistas (SPPC).
+        </p>
+
+        <p>
+          Licenciada em Psicologia pela Faculdade de Psicologia e Ciências da Educação da
+          Universidade do Porto (2004), iniciou o seu percurso profissional na investigação
+          em Psicologia Clínica, tendo posteriormente desempenhado a sua atividade clínica em
+          contexto hospitalar, ao longo de 17 anos.
+        </p>
+
+        <p>
+          Desde 2021, dedica-se exclusivamente à prática clínica privada, com particular enfoque
+          na psicoterapia de adultos e na terapia de casal, assim como na supervisão.
+        </p>
+
+        <p>
+          A abordagem IFS (Internal Family Systems) é uma paixão e uma força motriz central no
+          seu percurso pessoal e profissional.
+        </p>
+
+        <p>
+          É terapeuta certificada em IFS, com formação de nível 3, bem como em IFIO e Somatic IFS,
+          e tem colaborado como formadora assistente em vários treinos internacionais.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Momentos de mudança</h3>
-      <p>Apoio em fases difíceis e decisões importantes.</p>
+  <section class="section" id="servicos">
+    <h2 class="section-title">Serviços</h2>
+    <p class="section-subtitle">
+      Um acompanhamento especializado, centrado na pessoa, na relação e na transformação clínica.
+    </p>
+
+    <div class="services">
+      <div class="card">
+        <h3>Psicoterapia de adultos</h3>
+        <p>
+          Intervenção clínica individual orientada para o autoconhecimento, regulação emocional,
+          crescimento pessoal e mudança terapêutica sustentada.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Terapia de casal</h3>
+        <p>
+          Acompanhamento especializado da relação conjugal, promovendo comunicação, compreensão
+          mútua e reorganização dos vínculos afetivos.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Supervisão</h3>
+        <p>
+          Espaço de reflexão e aprofundamento clínico dirigido a profissionais que procuram
+          suporte qualificado à sua prática terapêutica.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Desenvolvimento pessoal</h3>
-      <p>Crescimento, clareza interior e equilíbrio.</p>
+  <section class="section" id="contacto">
+    <h2 class="section-title" style="text-align:center;">Contacto</h2>
+    <p class="section-subtitle" style="text-align:center; margin-left:auto; margin-right:auto;">
+      Para marcações, informações adicionais ou primeiro contacto.
+    </p>
+
+    <div class="contact-box">
+      <p style="margin:0; color:#6b7280;">Telefone</p>
+      <a href="tel:9141121438" class="phone-link">9141121438</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contacto" class="contacto">
-  <h2>Contacto</h2>
-  <p>Marque o seu primeiro contacto</p>
-
-  <div class="telefone">
-    <a href="tel:9141121438" style="color:white; text-decoration:none;">
-      9141121438
-    </a>
-  </div>
-</section>
-
-<footer>
-  © 2026 Ana Freire
-</footer>
+  <footer>
+    © Ana Seixas Freire. Todos os direitos reservados.
+  </footer>
 
 </body>
 </html>
